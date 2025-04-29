@@ -25,3 +25,45 @@
 #container a {
   text-decoration: none;
 }
+
+ion-content {
+  --background: #d8a7b1; /* Light pink background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%; /* Ensure full height for centering */
+  padding-top: 5rem; /* Add padding to bring content slightly down */
+}
+
+.timer-display {
+  color: #ffffff; /* White text */
+  font-family: 'Arial', sans-serif;
+  margin-top: 5rem; /* Additional margin to bring the timer down */
+}
+
+.timer-display h1 {
+  font-size: 6rem; /* Large font size for the timer */
+  font-weight: bold;
+  margin: 0;
+}
+
+.timer-display p {
+  font-size: 1.5rem; /* Smaller font size for the session text */
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.timer-controls {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+ion-button {
+  --background: #ffffff; /* White button background */
+  --color: #d8a7b1; /* Pink text color */
+  --border-radius: 8px;
+  font-size: 1.2rem;
+}

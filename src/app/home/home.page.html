@@ -1,20 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="timer-display">
+    <h1>{{ formatTime(timeLeft) }}</h1>
+    <p>{{ isWorkSession ? 'Work Session' : 'Break Session' }}</p>
+  </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="timer-controls">
+    <ion-button expand="block" (click)="startTimer()" [disabled]="isRunning">Start</ion-button>
+    <ion-button expand="block" (click)="stopTimer()">Stop</ion-button>
+    <ion-button expand="block" (click)="resetTimer()">Reset</ion-button>
   </div>
 </ion-content>
